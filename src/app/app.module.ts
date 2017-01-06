@@ -10,6 +10,8 @@ import {RouterModule} from "@angular/router";
 import { DashboardComponent } from './dashboard.component';
 import {HeroService} from "./hero.service";
 import {AppRoutingModule} from "./app-routing.module";
+import {InMemoryWebApiModule} from "angular-in-memory-web-api";
+import {InMemoryDataService} from "./in-memory-data.service";
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import {AppRoutingModule} from "./app-routing.module";
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService)
+
   ],
   providers: [HeroService],
   bootstrap: [AppComponent]
