@@ -13,6 +13,7 @@ import {Hero} from "./hero";
         </div>
       </a>
     </div>
+    <app-hero-search></app-hero-search>
   `,
   styles: [`
 [class*='col-'] {
